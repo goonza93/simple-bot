@@ -11,7 +11,7 @@ logger.level = 'debug';
 //       FILL THIS WITH DATA
 // #####################################
 const admins = []; // example: ["name","name2","name3"]
-const SID = ''; // server id
+const discordSID = ''; // server id
 const queueCID = '': // queue channel id
 const raidinCID = ''; // raiding channel id
 const COMMANDNAME = ''; // word to use as command example 'movequeue'
@@ -56,10 +56,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             break;
 			case COMMANDNAME:
 				if(isAdmin(user)){
-					var arrayKeys = Object.keys(bot.servers[SID].channels[queueCID].members);
+					var arrayKeys = Object.keys(bot.servers[discordSID].channels[queueCID].members);
 					for(var y=0; y<arrayKeys.length;y++){
 						bot.moveUserTo({
-							serverID: SID,
+							serverID: discordSID,
 							userID: arrayKeys[y],
 							channelID: raidinCID,
 						});
