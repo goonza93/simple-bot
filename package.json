@@ -1,0 +1,11 @@
+{
+  "name": "Lost Halls-BOT",
+  "version": "1.0.0",
+  "description": "Lost Halls discord BOT.",
+  "main": "bot.js",
+  "author": "LostHalls",
+  "dependencies": {
+    "discord.io": "github:woor/discord.io#gateway_v6",
+    "winston": "^2.4.0"
+  }
+}
