@@ -56,12 +56,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             break;
 			case COMMANDNAME:
 				if(isAdmin(user)){
-					var arrayKeys = Object.keys(bot.servers['392908610813820929'].channels['392908610813820933'].members);
+					var arrayKeys = Object.keys(bot.servers[SID].channels[queueCID].members);
 					for(var y=0; y<arrayKeys.length;y++){
 						bot.moveUserTo({
-							serverID: '392908610813820929',
+							serverID: SID,
 							userID: arrayKeys[y],
-							channelID: '397834794857267201',
+							channelID: raidinCID,
 						});
 					}
 				}
